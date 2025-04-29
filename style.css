@@ -267,3 +267,64 @@ h4 {
 }
 
 
+/* LIve TV section */
+.live {
+    background-color: #151516;
+    padding: 40px;
+
+}
+
+.live-border {
+    border: 4px solid #1ce783;
+    border-radius: 16px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.live a {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 20px;
+    text-decoration: underline;
+
+}
+
+/* Live Sports section */
+
+.live-sports {
+    background: url("https://cnbl-cdn.bamgrid.com/assets/3ab6ce86baaf4225b072c58fa9497ec949c0c9e284b3958ecda1429b7f3744f9/original") no-repeat center center / cover;
+    height: 800px;
+    position: relative;
+}
+
+.live-sports-content {
+    position: absolute;
+    top: 160px;
+    left: 100px;
+    max-width: 550px;
+}
+
+.live-sports-logos {
+    width: 300px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.live-sports-logos>div {
+    background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/network-logo-bg.png?raw=true") no-repeat center center / cover;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.live-sports-logos img {
+    width: 40px;
+}
