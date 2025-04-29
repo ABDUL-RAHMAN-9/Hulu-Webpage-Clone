@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.7;
+    overflow-x: hidden;
+
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ccc;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+img {
+    width: 100%;
+
+}
+
+h3 {
+
+    font-size: 26px;
+    font-weight: 300;
+}
+
+h4 {
+    color: #00ed82;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    min-width: 135px;
+    padding: 20px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 14px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.btn-cta:hover {
+    opacity: 0.8;
+}
+
+.btun-outline {
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+
+}
+
+.btun-outline:hover {
+    color: #fff;
+    background-color: #ccc;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #000;
+}
+
+
+.legal-text {
+    font-size: 10px;
+    color: #ccc;
+    margin-top: 20px;
+
+}
+
+.sub-link {
+    display: block;
+    color: #ccc;
+    font-size: 12px;
+    margin-top: 5px;
+    text-decoration: underline;
+
+
+}
+
+.text-xl {
+    font-size: 70px;
+    font-weight: bold;
+
+}
+
+.sub-text {
+    max-width: 850px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
