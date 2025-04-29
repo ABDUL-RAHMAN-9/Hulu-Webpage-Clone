@@ -370,3 +370,72 @@ h4 {
     height: 25px;
     margin-right: 25px;
 }
+
+/* Modal or Login */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.modal-box {
+    margin: 10% auto;
+    width: 400px;
+    background-color: #fff;
+    color: #333;
+    position: relative;
+    animation: modalopen 1s;
+
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-body {
+    padding: 50px;
+}
+
+.modal-body h3 {
+    font-weight: bold;
+}
+
+.modal-body .btn {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.modal .close {
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal .modal-footer {
+    background-color: #f7f7f9;
+    color: #333;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+
+}
+
+.modal a {
+    color: steelblue;
+}
+
