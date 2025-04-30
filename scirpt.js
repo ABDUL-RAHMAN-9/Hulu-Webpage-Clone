@@ -20,24 +20,36 @@ loginButton.addEventListener("click", openModal);
 closeButton.addEventListener("click", closeModal);
 window.addEventListener("click", outsideClick);
 
-// tabs toggle
-document.querySelectorAll(".tab-button").forEach(button => {
-    button.addEventListener("click", () => {
-        // Remove active class from all buttons
-        document
-            .querySelectorAll(".tab-button")
-            .forEach(btn => btn.classList.remove("active"));
+// Tabs toggle with initial active tab setup
+document.addEventListener("DOMContentLoaded", () => {
+    // Set the first tab as active by default (or customize which tab to activate)
+    const firstButton = document.querySelector(".tab-button");
+    const firstContent = document.querySelector(".tab-content");
 
-        // Add active class to clicked button
-        button.classList.add("active");
+    if (firstButton && firstContent) {
+        firstButton.classList.add("active");
+        firstContent.classList.add("active");
+    }
 
-        // Hide all tab contents
-        document
-            .querySelectorAll(".tab-content")
-            .forEach(content => content.classList.remove("active"));
+    // Add click event listeners to handle tab toggling
+    document.querySelectorAll(".tab-button").forEach(button => {
+        button.addEventListener("click", () => {
+            // Remove active class from all buttons
+            document
+                .querySelectorAll(".tab-button")
+                .forEach(btn => btn.classList.remove("active"));
 
-        // Show corresponding tab content
-        const tabId = button.getAttribute("data-tab");
-        document.getElementById(tabId).classList.add("active");
+            // Add active class to the clicked button
+            button.classList.add("active");
+
+            // Hide all tab contents
+            document
+                .querySelectorAll(".tab-content")
+                .forEach(content => content.classList.remove("active"));
+
+            // Show the corresponding tab content
+            const tabId = button.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active");
+        });
     });
 });
