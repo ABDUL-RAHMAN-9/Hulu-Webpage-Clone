@@ -64,7 +64,13 @@ h4 {
 
 }
 
+.btn-cta {
+    transition: all 0.3s ease-in-out;
+
+}
+
 .btn-cta:hover {
+
     opacity: 0.8;
 }
 
@@ -72,11 +78,12 @@ h4 {
     background: none;
     color: #fff;
     border: 2px solid #fff;
+    transition: all 0.3s ease-in-out;
 
 }
 
 .btun-outline:hover {
-    color: #fff;
+    color: #333;
     background-color: #ccc;
 }
 
@@ -286,12 +293,18 @@ h4 {
 .live {
     background-color: #151516;
     padding: 40px;
-
 }
-.live .legal-text a{
+
+.live .legal-text a {
     font-size: 8px;
     text-decoration: underline;
     color: #ccc;
+}
+
+.anchor-underline a {
+    text-decoration: underline;
+    color: #ccc;
+
 }
 
 .live-border {
@@ -302,13 +315,15 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
+
 
 .live a {
     text-transform: uppercase;
     font-size: 18px;
     margin-top: 20px;
-    /* text-decoration: underline; */
+    text-decoration: underline;
 
 }
 
@@ -374,7 +389,7 @@ h4 {
 
 .footer-lists .list-head {
     text-transform: uppercase;
-    font-weight:700;
+    font-weight: 700;
     margin-bottom: 5px;
     color: rgb(96, 92, 92);
 }
