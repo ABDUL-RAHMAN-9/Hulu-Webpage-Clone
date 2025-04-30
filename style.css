@@ -104,15 +104,18 @@ h4 {
 }
 
 .text-xl {
-    font-size: 70px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight: 600;
+
 
 }
 
 .sub-text {
     max-width: 850px;
-    margin-bottom: 10px;
-    font-size: 24px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-weight: 100;
+    font-size: 18px;
 }
 
 /* Header section */
@@ -300,7 +303,7 @@ h4 {
     text-transform: uppercase;
     font-size: 18px;
     margin-top: 20px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 
 }
 
@@ -314,8 +317,8 @@ h4 {
 
 .live-sports-content {
     position: absolute;
-    top: 160px;
-    left: 100px;
+    top: 180px;
+    left: 200px;
     max-width: 550px;
 }
 
@@ -577,13 +580,11 @@ h4 {
 
 }
 
-.tabs .tab-button:hover {
-    color: rgb(109, 107, 107);
-}
-
 .tabs .tab-button.active {
     color: white;
+
 }
+
 
 .tab-content {
     display: none;
@@ -592,4 +593,45 @@ h4 {
 
 .tab-content.active {
     display: block;
+}
+
+/* Underline styles */
+.underlinestyle {
+    position: relative;
+    padding: 0.5em 0;
+}
+
+/* Fade in */
+.underlinestyle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3em;
+    border-radius: 50px;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+
+.underlinestyle:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
+
+/* Slide in */
+li:nth-child(2) .underlinestyle {
+    overflow: hidden;
+}
+
+li:nth-child(2) .underlinestyle::after {
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+}
+
+li:nth-child(2) .underlinestyle:hover::after,
+li:nth-child(2) .underlinestyle:focus::after {
+    transform: translate3d(0, 0, 0);
 }
