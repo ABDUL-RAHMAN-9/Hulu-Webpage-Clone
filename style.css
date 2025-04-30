@@ -563,3 +563,33 @@ h4 {
     }
 
 }
+
+/* Tabs */
+
+.tabs .tab-button {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    margin: 16px;
+    color: grey;
+    font-weight: 900;
+    cursor: pointer;
+
+}
+
+.tabs .tab-button:hover {
+    color: rgb(109, 107, 107);
+}
+
+.tabs .tab-button.active {
+    color: white;
+}
+
+.tab-content {
+    display: none;
+
+}
+
+.tab-content.active {
+    display: block;
+}
