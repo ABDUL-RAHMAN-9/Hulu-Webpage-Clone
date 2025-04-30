@@ -218,6 +218,7 @@ h4 {
     gap: 20px;
     margin-top: 40px;
 
+
 }
 
 
@@ -233,6 +234,18 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.categories .cover-1,
+.cover-2,
+.cover-3,
+.cover-4 {
+    border-radius: 10px;
+}
+
+.categories .cover-grad:hover {
+    border: 4px solid grey;
+    border-radius: 10px;
     background: linear-gradient(156.82deg,
             rgba(0, 0, 0, 0.6) 4.58%,
             rgba(0, 0, 0, 0) 69.61%),
@@ -240,7 +253,6 @@ h4 {
             rgba(0, 0, 0, 0.2) 4.71%,
             rgba(0, 0, 0, 0) 71.49%);
 }
-
 
 .categories .cover-text {
     position: absolute;
