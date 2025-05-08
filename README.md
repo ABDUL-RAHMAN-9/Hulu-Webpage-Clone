@@ -3,6 +3,10 @@
 ## Overview
 This project implements a dynamic live sports section featuring interactive tabs with smooth transitions, dynamic background image toggling, and visually appealing hover effects for buttons. It's designed to provide an engaging user experience while maintaining a clean and responsive layout.
 
+## Live Preview
+You can view the live preview of the **Hulu Webpage Clone** project by clicking the link below:
+[**Live Sports Section - Live Preview**](https://abdul-rahman-9.github.io/Hulu-Webpage-Clone/)
+
 ## Features
 - **Dynamic Tab Functionality**: Seamless switching between tabs (`Live Sports`, `Breaking News`, `Biggest Events`) with active states.
 - **Background Image Transition**: Smooth transitions for dynamic background images based on the active tab.
