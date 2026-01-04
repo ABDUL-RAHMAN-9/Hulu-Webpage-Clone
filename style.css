@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
 
+/* --- RESET & BASE --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,9 +12,14 @@ body {
     font-family: "Rubik", sans-serif;
     background-color: #000;
     color: #fff;
-    line-height: 1.7;
+    line-height: 1.6;
     overflow-x: hidden;
+}
 
+img {
+    width: 100%;
+    /* Default for banners/covers */
+    display: block;
 }
 
 a {
@@ -21,155 +27,84 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: #ccc;
+/* --- TYPOGRAPHY --- */
+.text-xl {
+    font-size: clamp(28px, 5vw, 50px);
+    /* Responsive font size */
+    font-weight: 600;
 }
 
-ul {
-    list-style-type: none;
-
-}
-
-img {
-    width: 100%;
-
-}
-
-h3 {
-
-    font-size: 26px;
+.sub-text {
+    max-width: 850px;
+    margin: 10px auto;
+    font-size: 18px;
     font-weight: 300;
 }
 
-h4 {
-    color: #00ed82;
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
+/* --- BUTTONS --- */
 .btn {
     display: inline-block;
     background: #fff;
     color: #333;
-    min-width: 135px;
-    padding: 20px 32px;
+    padding: 15px 30px;
     font-size: 15px;
     font-weight: 600;
-    line-height: 14px;
     border: none;
     border-radius: 5px;
-    letter-spacing: 1px;
     cursor: pointer;
     text-transform: uppercase;
-
-}
-
-.btn-cta {
-    transition: all 0.3s ease-in-out;
-
-}
-
-.btn-cta:hover {
-
-    opacity: 0.8;
+    transition: 0.3s;
 }
 
 .btun-outline {
     background: none;
     color: #fff;
     border: 2px solid #fff;
-    transition: all 0.3s ease-in-out;
-
 }
 
 .btun-outline:hover {
+    background: #fff;
     color: #333;
-    background-color: #ccc;
 }
 
-.btn-dark {
-    color: #fff;
-    background-color: #000;
-}
-
-
-.legal-text {
-    font-size: 10px;
-    color: #ccc;
-    margin-top: 20px;
-
-}
-
-.sub-link {
-    display: block;
-    color: #ccc;
-    font-size: 12px;
-    margin-top: 5px;
-    text-decoration: underline;
-
-
-}
-
-.text-xl {
-    font-size: 50px;
-    font-weight: 600;
-
-
-}
-
-.sub-text {
-    max-width: 850px;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    font-weight: 100;
-    font-size: 18px;
-}
-
-/* Header section */
+/* --- HEADER --- */
 .header {
-    height: 530px;
+    min-height: 530px;
     background: url(https://cnbl-cdn.bamgrid.com/assets/f09f88e62518d16cdd3d60796c1a1ebdba5a010807d8a09c55b0854e6a06668c/original) no-repeat center center / cover;
+    position: relative;
+    padding-bottom: 50px;
 }
 
 .header nav {
     display: flex;
     justify-content: flex-end;
     padding: 20px 40px;
-    z-index: 2;
     position: relative;
+    z-index: 10;
 }
 
-.header nav .login-btn {
-    cursor: pointer;
+.login-btn {
     background: none;
     border: none;
     color: #fff;
     font-weight: bold;
+    cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.header .header-content {
+.header-content {
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .header .logo {
     width: 270px;
     margin: 20px 0;
-
-}
-
-.header .header-text-1 {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.header .header-text-2 {
-    font-size: 18px;
-    margin: 25px 0;
 }
 
 .header::after {
@@ -178,259 +113,403 @@ h4 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 180px;
-    z-index: 1;
-    background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0.76) 15.54%,
-            rgba(0, 0, 0, 0.192) 60.23%,
-            rgba(0, 0, 0, 8e-5) 100%);
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
 }
 
-/* Sub Header */
+/* --- SUB HEADER (BUNDLE) --- */
 .sub-header {
-    display: grid;
-    grid-template-columns: 2fr 4fr 2fr;
-    gap: 40px;
-    align-items: center;
-    padding: 30px 40px;
-    background: linear-gradient(318.68deg,
-            #0f495c 0%,
-            #0d3640 49.72%,
-            #08141f 100%);
-
-}
-
-.sub-header>div:last-of-type {
-    justify-self: end;
-    align-self: end;
-}
-
-
-.sub-header>div:last-of-type .sub-link {
-    text-align: center;
-}
-
-/* Categories section */
-.categories {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(318.68deg, #0f495c 0%, #0d3640 49.72%, #08141f 100%);
     text-align: center;
-    padding: 90px 40px;
 }
 
+.sub-header img {
+    max-width: 300px;
+}
 
+/* --- CATEGORIES --- */
+.categories {
+    padding: 80px 20px;
+    text-align: center;
+}
 
 .categories .covers {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* This makes the grid responsive without media queries */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    margin-top: 40px;
-
-
+    max-width: 1200px;
+    margin: 40px auto 0;
 }
-
 
 .categories .covers>div {
-    height: 500px;
-    width: 300px;
+    height: 450px;
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
-.categories .cover-grad {
+.cover-grad {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    transition: 0.3s;
 }
 
-.categories .cover-1,
-.cover-2,
-.cover-3,
-.cover-4 {
-    border-radius: 10px;
+.cover-grad:hover {
+    border: 4px solid #ccc;
+    background: rgba(0, 0, 0, 0.2);
 }
 
-.categories .cover-grad:hover {
-    border: 4px solid grey;
-    border-radius: 10px;
-    background: linear-gradient(156.82deg,
-            rgba(0, 0, 0, 0.6) 4.58%,
-            rgba(0, 0, 0, 0) 69.61%),
-        linear-gradient(24.5deg,
-            rgba(0, 0, 0, 0.2) 4.71%,
-            rgba(0, 0, 0, 0) 71.49%);
-}
-
-.categories .cover-text {
+.cover-text {
     position: absolute;
     top: 20px;
     left: 20px;
     text-align: left;
 }
 
-.categories .cover-1 {
-
-    background: url("https://cnbl-cdn.bamgrid.com/assets/5f2042653fa97c39c8cab0de73f649db75e20585a50472cdacd2787e417de5c8/original") no-repeat center center/ cover;
+.cover-1 {
+    background-image: url("https://cnbl-cdn.bamgrid.com/assets/5f2042653fa97c39c8cab0de73f649db75e20585a50472cdacd2787e417de5c8/original");
 }
 
-.categories .cover-2 {
-    background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-2.jpg?raw=true")no-repeat center center/ cover;
+.cover-2 {
+    background-image: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-2.jpg?raw=true");
 }
 
-.categories .cover-3 {
-    background: url("https://cnbl-cdn.bamgrid.com/assets/62183f6d48d8844f3fb071c2b131cb1630c1753a770de1be7d076e2da787d455/original") no-repeat center center/ cover;
+.cover-3 {
+    background-image: url("https://cnbl-cdn.bamgrid.com/assets/62183f6d48d8844f3fb071c2b131cb1630c1753a770de1be7d076e2da787d455/original");
 }
 
-.categories .cover-4 {
-    background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-4.jpg?raw=true") no-repeat center center / cover;
+.cover-4 {
+    background-image: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-4.jpg?raw=true");
 }
 
-
-/* LIve TV section */
+/* --- LIVE TV SECTION --- */
 .live {
     background-color: #151516;
-    padding: 40px;
-}
-
-.live .legal-text a {
-    font-size: 8px;
-    text-decoration: underline;
-    color: #ccc;
-}
-
-.anchor-underline a {
-    text-decoration: underline;
-    color: #ccc;
-
+    padding: 60px 20px;
+    /* Padding for the outer section */
+    display: flex;
+    justify-content: center;
 }
 
 .live-border {
     border: 4px solid #1ce783;
     border-radius: 16px;
-    padding: 100px;
+    padding: 80px 40px;
+    /* Large padding for Desktop */
+    max-width: 1100px;
+    /* Stops the box from getting too wide */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 20px;
+    /* Spacing between elements */
 }
 
+/* Adjusting the text inside the green border */
+.live .text-xl {
+    margin: 10px 0;
+    line-height: 1.2;
+}
 
-.live a {
+.live .sub-text {
+    font-size: 20px;
+    color: #fff;
+    max-width: 800px;
+}
+
+.live .legal-text {
+    font-size: 12px;
+    color: #ccc;
+    max-width: 900px;
+    margin-top: 10px;
+}
+
+/* Styling the "View Channels" Link */
+.live .view-channels {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
     margin-top: 20px;
-    text-decoration: underline;
-
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
 }
 
-/* Live Sports section */
+.live .view-channels:hover {
+    border-bottom: 2px solid #fff;
+}
 
+.live .view-channels span {
+    margin-left: 5px;
+    transition: margin 0.3s;
+}
+
+.live .view-channels:hover span {
+    margin-left: 15px;
+    /* Arrow moves slightly on hover */
+}
+
+/* --- RESPONSIVE FIX FOR LIVE SECTION --- */
+@media (max-width: 768px) {
+    .live {
+        padding: 40px 15px;
+    }
+
+    .live-border {
+        padding: 40px 20px;
+        /* Smaller padding for mobile */
+        border-width: 3px;
+        /* Slightly thinner border for small screens */
+    }
+
+    .live .sub-text {
+        font-size: 16px;
+    }
+
+    .live .text-xl {
+        font-size: 28px;
+    }
+}
+
+/* --- LIVE SPORTS TABS --- */
 .live-sports {
-    background: url("https://cnbl-cdn.bamgrid.com/assets/3ab6ce86baaf4225b072c58fa9497ec949c0c9e284b3958ecda1429b7f3744f9/original") no-repeat center center / cover;
-    height: 800px;
+    min-height: 800px;
+    background-size: cover;
+    background-position: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    transition: 0.8s ease;
 }
 
 .live-sports-content {
+    width: 90%;
+    max-width: 600px;
+    margin-left: 10%;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.tab-button.active {
+    color: #fff;
+}
+
+.tab-button.active::after {
+    content: '';
     position: absolute;
-    top: 180px;
-    left: 200px;
-    max-width: 550px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s;
 }
 
 .live-sports-logos {
-    width: 300px;
-    margin-top: 40px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-
-.live-sports-logos>div {
-    background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/network-logo-bg.png?raw=true") no-repeat center center / cover;
-    height: 60px;
+.live-sports-logos div {
+    background: rgba(255, 255, 255, 0.1);
     width: 60px;
+    height: 60px;
+    border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
+/* FIX: Tab logos size */
 .live-sports-logos img {
-    width: 40px;
+    width: 40px !important;
 }
 
-
-/* Footer section */
-
-.footer {
-    background: black;
-    color: #333;
-}
-
-.footer a {
-    color: #333;
-}
-
-.footer-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px;
-}
-
-.footer-lists {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-lists .list-head {
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: rgb(96, 92, 92);
-}
-
-.divider {
-    width: 100%;
-    height: 3px;
-    border-top: 1px solid #ccc;
-    margin: 30px 0;
-}
-
-.social-icons img {
-    width: 25px;
-    height: 25px;
-    margin-right: 25px;
-}
-
-/* Modal or Login */
+/* --- MODAL (LOGIN) --- */
 .modal {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-    height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 100;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
 }
 
 .modal-box {
-    margin: 10% auto;
-    width: 400px;
-    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
     color: #333;
+    border-radius: 8px;
     position: relative;
-    animation: modalopen 1s;
-
+    padding: 40px;
+    animation: modalopen 0.4s;
 }
 
-@keyframes modalopen {
+/* FIX: Close Icon Size */
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px !important;
+    /* Forces small size */
+    height: 20px !important;
+    cursor: pointer;
+}
+
+.modal-box h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.form-control label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background: #ebedef;
+    color: #333;
+    padding: 60px 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-lists ul {
+    min-width: 160px;
+}
+
+.footer-lists .list-head {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #555;
+    font-size: 14px;
+}
+
+.divider {
+    height: 1px;
+    background: #ccc;
+    margin: 30px 0;
+}
+
+/* FIX: Social Icons Size */
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 25px !important;
+    /* Forces small size */
+    height: 25px !important;
+    filter: brightness(0.2);
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    .header .logo {
+        width: 200px;
+    }
+
+    .live-sports-content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .tabs,
+    .live-sports-logos {
+        justify-content: center;
+    }
+
+    .footer-lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-lists {
+        grid-template-columns: 1fr;
+    }
+
+    .header-content h4 {
+        font-size: 12px;
+    }
+}
+
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -440,219 +519,14 @@ h4 {
     }
 }
 
-.modal-body {
-    padding: 50px;
-}
-
-.modal-body h3 {
-    font-weight: bold;
-}
-
-.modal-body .btn {
-    width: 100%;
-    margin-top: 30px;
-}
-
-.modal .close {
-    cursor: pointer;
-    height: 23px;
-    width: 23px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.modal .modal-footer {
-    background-color: #f7f7f9;
-    color: #333;
-    padding: 20px 0;
-    border-top: 1px solid #eee;
-    text-align: center;
-
-}
-
-.modal a {
-    color: steelblue;
-}
-
-/*  Form */
-.form-control {
-    margin: 20px 0;
-
-}
-
-.form-control label {
-    display: block;
-    text-transform: uppercase;
-}
-
-.form-control input {
-    width: 100%;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    height: 50px;
-    padding: 5px;
-}
-
-/* Media Queries */
-
-@media (max-width:1300px) {
-    .categories .covers {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width:1100px) {
-    .categories .covers {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width:768px) {
-
-    .header .logo {
-        width: 200px;
+@keyframes modalopen {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 
-    .header .header-content {
-        text-align: center;
-        padding: 0 20px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-
-    .header .header-text-1 {
-        margin-bottom: 40px;
-    }
-
-    .header .header-text-2 {
-        display: none;
-    }
-
-    .sub-header {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .sub-header img {
-        width: 250px;
-        margin: auto;
-    }
-
-    .sub-header>div:last-of-type {
-        justify-self: center;
-        align-self: center;
-    }
-
-    .text-xl {
-        font-size: 40px;
-        line-height: 1.3;
-    }
-
-    .sub-text {
-        font-size: 20px;
-    }
-
-    .categories .covers {
-        grid-template-columns: 1fr;
-    }
-
-    .live {
-        text-align: center;
-    }
-
-    .live-border {
-        padding: 30px 10px;
-    }
-
-    .live-sports {
-        background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/live-sports-small.jpg?raw=true") no-repeat center center / cover;
-    }
-
-    .live-sports-content {
-        top: 30px;
-        left: 30px;
-        margin-top: 60px;
-    }
-
-    .footer-lists {
-        flex-direction: column;
-    }
-
-    .footer-lists .list-head {
-        margin-top: 10px;
-    }
-
-    .modal .modal-box {
-        width: 350px;
-    }
-
-}
-
-/* Tabs */
-
-.tabs .tab-button {
-    text-transform: uppercase;
-    background-color: transparent;
-    border: none;
-    margin: 16px;
-    color: grey;
-    font-weight: 900;
-    cursor: pointer;
-
-}
-
-.tabs .tab-button.active {
-    color: white;
-
-}
-
-
-.tab-content {
-    display: none;
-
-}
-
-.tab-content.active {
-    display: block;
-}
-
-/* Underline styles */
-.underlinestyle {
-    position: relative;
-    padding: 0.5em 0;
-}
-
-/* Fade in */
-.underlinestyle::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.3em;
-    border-radius: 50px;
-    background-color: white;
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
-}
-
-
-.underlinestyle:focus::after {
-    opacity: 1;
-    transform: translate3d(0, 0.2em, 0);
-}
-
-/* Slide in */
-li:nth-child(2) .underlinestyle {
-    overflow: hidden;
-}
-
-li:nth-child(2) .underlinestyle::after {
-    opacity: 1;
-    transform: translate3d(-100%, 0, 0);
-}
-
-li:nth-child(2) .underlinestyle:hover::after,
-li:nth-child(2) .underlinestyle:focus::after {
-    transform: translate3d(0, 0, 0);
 }
